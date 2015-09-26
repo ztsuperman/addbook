@@ -1,0 +1,50 @@
+<%= form_for(@address_book) do |f| %>
+  <% if @address_book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@address_book.errors.count, "error") %> prohibited this address_book from being saved:</h2>
+
+      <ul>
+      <% @address_book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :First_name %><br>
+    <%= f.text_field :contact_fname, placeholder: '请输入名' %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :contact_lname, placeholder: '请输入姓' %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, placeholder: 'example@email.com' %><br>
+    <strong><p style="color: red"><%= f.label :邮箱输错了不能过! %></p></strong>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone, placeholder: '比如：510-123-2444' %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address, placeholder: '输入地址' %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city, placeholder: '输入城市' %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state, placeholder: '州' %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br>
+    <%= f.number_field :zip, placeholder: '邮编' %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,51 @@
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+<p id="notice"><%= notice %></p>
+
+<div class="left_blank"></div>
+
+<div id="show_div">
+  <p>
+    <strong>First Name:</strong>
+    <%= @address_book.contact_fname %>
+  </p>
+
+  <p>
+    <strong>Last Name:</strong>
+    <%= @address_book.contact_lname %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @address_book.email %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= @address_book.phone %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @address_book.address %>
+  </p>
+
+  <p>
+    <strong>City:</strong>
+    <%= @address_book.city %>
+  </p>
+
+  <p>
+    <strong>State:</strong>
+    <%= @address_book.state %>
+  </p>
+
+  <p>
+    <strong>Zip:</strong>
+    <%= @address_book.zip %>
+  </p>
+
+  <%= link_to 'Edit', edit_address_book_path(@address_book) %> |
+  <%= link_to 'Back', address_books_path %>
+</div>
+<div class="right_blank"></div>

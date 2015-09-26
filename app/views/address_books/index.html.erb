@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+<h1 >张腾的简单的 Address Book。。。</h1>
+
+<div id="index_table">
+<table>
+  
+
+  <tbody>
+  
+	<div class="panel panel-default">
+	  
+      <th colspan="3"></th>
+		
+	
+				
+	
+	<table class="table table-hover">
+	<tr class="active">
+	<th>First Name（名）</th>
+      <th>Last Name（姓）</th>
+      <th>Email</th>
+      <th>Phone（电话）</th>
+      <th>Address（地址）</th>
+      <th>City（城市）</th>
+      <th>State（州）</th>
+      <th>Zip（邮编）</th>
+	  </tr>
+	  
+		<% @address_books.each do |address_book| %>
+      	
+			<tr class="active">
+			
+        <td onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.contact_fname %></td>
+        <td onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.contact_lname %></td>
+        <td onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.email %></td>
+        <td onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.phone %></td>
+        <td onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.address %></td>
+        <td onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.city %></td>
+        <td onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.state %></td>
+        <td onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.zip %></td>
+		
+        <td><%= link_to 'Show', address_book %></td>
+        <td><%= link_to 'Edit', edit_address_book_path(address_book) %></td>
+        <td><%= link_to 'Delete', address_book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		</tr>
+		
+		<% end %>
+	
+		</table>
+	
+	</div>
+<br>
+
+<%= link_to 'Add a new contact 添加联系人', new_address_book_path %>

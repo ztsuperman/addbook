@@ -1,0 +1,63 @@
+.left_blank {
+  float: left;
+  width: 40%;
+  height: 550px;
+}
+
+.right_blank {
+  float: left;
+  width: 40%;
+  height: 550px;
+}
+
+.rcorners {
+  align: center;
+  float: left;
+  border-radius: 25px;
+  background-color: #FFFFFF;
+  padding: 20px;
+  width: 20%;
+  height: 550px;
+}
+
+#new_contact {
+  color: #CCE6FF;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+}
+
+#edit_contact {
+  color: #CCE6FF;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+}
+
+.field label {
+  padding: 0em;
+}
+
+.field input {
+  padding: 0.2em;
+}
+
+#show_div {
+  float: left;
+  border-radius: 25px;
+  background-color: #FFFFFF;
+  padding: 20px;
+  width: 20%;
+  height: 320px;
+}
+
+#index_header {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+#index_table {
+  border-radius: 25px;
+  background-color: #FFFFFF;
+  padding: 20px;
+  width: 90%;
+  height: 100%;
+}
