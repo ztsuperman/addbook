@@ -1,6 +1,6 @@
 class AddressBooksController < ApplicationController
   before_action :set_address_book, only: [:show, :edit, :update, :destroy]
-
+  respond_to :html, :js
   # GET /address_books
   # GET /address_books.json
   def index

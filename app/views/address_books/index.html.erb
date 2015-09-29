@@ -4,6 +4,9 @@
 
 <h1 >张腾的简单的 Address Book。。。</h1>
 
+
+
+
 <div id="index_table">
 <table>
   
@@ -48,10 +51,12 @@
 		</tr>
 		
 		<% end %>
-	
+	    
 		</table>
 	
 	</div>
 <br>
-
-<%= link_to 'Add a new contact 添加联系人', new_address_book_path %>
+<h1 id="task-form" style="display:none;">被藏起来的部分</h1>
+<h1><%= link_to '1. Add a new contact 添加联系人 by 普通方式', new_address_book_path %></h1>
+<br>
+<h1><%= link_to '2. Add a new contact 添加联系人 by AJAX！！', new_address_book_path, remote: true %></h1>
