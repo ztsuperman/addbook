@@ -5,9 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= javascript_include_tag '1' %>
+  <%= javascript_include_tag '2' %>
+  <script type="text/javascript" src="1.js"></script>
+  <script type="text/javascript" src="2.js"></script>
 </head>
 <body>
-
+	<canvas id="myCanvas"></canvas>
+	<%= javascript_include_tag '3' %>
+	<%= javascript_include_tag 'main' %>
 <%= yield %>
 
 </body>
