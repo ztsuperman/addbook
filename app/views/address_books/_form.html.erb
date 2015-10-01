@@ -10,7 +10,23 @@
       </ul>
     </div>
   <% end %>
+<script type="text/javascript">
+function aaa(){
+var xxx = document.getElementById("abcd").lastElementChild;
 
+
+var exp = new RegExp("^[0-9]{9}$");
+
+if(!exp.test(xxx.value)){
+	
+	alert("try again!");
+	xxx.value="";
+	xxx.focus();
+}
+
+}
+
+</script>
   <div class="field">
     <%= f.label :First_name %><br>
     <%= f.text_field :contact_fname, placeholder: '请输入名' %>
@@ -21,12 +37,14 @@
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email, placeholder: 'example@email.com' %><br>
-    <strong><p style="color: red"><%= f.label :邮箱输错了不能过! %></p></strong>
+	<strong><p style="color: red"><%= f.label :利用Browser做Validation! %></p></strong>
+    <%= f.email_field :email, placeholder: 'example@email.com' %><br>
+    
   </div>
-  <div class="field">
+  <div class="field" id="abcd" onchange="aaa()">
     <%= f.label :phone %><br>
-    <%= f.text_field :phone, placeholder: '比如：510-123-2444' %>
+	<strong><p style="color: red"><%= f.label :利用Regex做Validation! %></p></strong>
+    <%= f.text_field :phone, placeholder: '必须填9个数字！' %>
   </div>
   <div class="field">
     <%= f.label :address %><br>
