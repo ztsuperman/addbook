@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#user password
+gem 'bcrypt', '~> 3.1.7'
+
 gem 'responders', '~> 2.0'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]

@@ -12,15 +12,15 @@
 
   <tbody>
   
-	<div class="panel panel-default">
+	<div class="panel panel-default table-responsive">
 	  
       <th colspan="3"></th>
 		
 	
 				
 	
-	<table class="table table-hover">
-	<tr class="active">
+	<table class="table table-hover table-bordered table-striped">
+	<tr class="danger">
 	<th>First Name（名）</th>
       <th>Last Name（姓）</th>
       <th>Email</th>
@@ -29,20 +29,23 @@
       <th>City（城市）</th>
       <th>State（州）</th>
       <th>Zip（邮编）</th>
+	  <th></th>
+	  <th></th>
+	  <th></th>
 	  </tr>
 	  
 		<% @address_books.each do |address_book| %>
       	
-			<tr class="active">
+		<tr class="active">
 			
-        <td onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.contact_fname %></td>
-        <td onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.contact_lname %></td>
-        <td onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.email %></td>
-        <td onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.phone %></td>
-        <td onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.address %></td>
-        <td onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.city %></td>
-        <td onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.state %></td>
-        <td onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.zip %></td>
+        <td class="active" onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.contact_fname %></td>
+        <td class="success" onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.contact_lname %></td>
+        <td class="warning" onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.email %></td>
+        <td class="danger" onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.phone %></td>
+        <td class="info" onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.address %></td>
+        <td class="active" onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.city %></td>
+        <td class="success" onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.state %></td>
+        <td class="warning" onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.zip %></td>
 		
         <td><%= link_to 'Show', address_book %></td>
         <td><%= link_to 'Edit', edit_address_book_path(address_book) %></td>
@@ -55,7 +58,17 @@
 	
 	</div>
 <br>
-<h1 id="task-form" style="display:none;">被藏起来的部分</h1>
-<h1><%= link_to '1. Add a new contact 添加联系人 by 普通方式', new_address_book_path %></h1>
-<br>
-<h1><%= link_to '2. Add a new contact 添加联系人 by AJAX！！', new_address_book_path, remote: true %></h1>
+<style>  
+.col-center-block {  
+    float: none;  
+    display: block;  
+    margin-left: auto;  
+    margin-right: auto;  
+}  
+</style>  
+
+<h1 id="task-form" style="display:none;">被藏起来的AJAX部分</h1>
+<div class="btn-group-vertical btn-group-lg col-center-block" role="group" >
+<button type="button" class="btn btn-default btn-danger btn-block"><%= link_to '1. Add a new contact 添加联系人 by 普通方式', new_address_book_path %></button>
+<button type="button" class="btn btn-default btn-info"><%= link_to '2. Add a new contact 添加联系人 by AJAX！！', new_address_book_path, remote: true %></button>
+</div>
