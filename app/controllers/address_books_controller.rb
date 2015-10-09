@@ -5,6 +5,10 @@ class AddressBooksController < ApplicationController
   respond_to :html, :js
   # GET /address_books
   # GET /address_books.json
+  def jqueryindex
+	render 'jqtest'
+  end
+  
   def index
     @address_books = AddressBook.all
   end
