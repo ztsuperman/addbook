@@ -1,0 +1,86 @@
+<%= link_to "BACK to index", address_books_path %>
+<%= javascript_include_tag 'jqtest.js' %>
+<style>
+.divtest {
+    height: 100px;
+    width: 100px;
+    background-color: #FA6900;
+    border-radius: 5px;
+	float:left;
+	margin-left: 100px;
+}
+.divtest1 {
+    height: 100px;
+    width: 100px;
+    background-color: #FA6900;
+    border-radius: 5px;
+	float:left;
+	margin-left: 100px;
+}
+
+.panel {
+	background: #ffffbd;
+    background-size:90% 90%;
+   
+	display:none;
+    
+
+    height: 100px;
+    width: 100px;
+    background-color: #FA6900;
+    border-radius: 5px;
+	float:left;
+	margin-left: 100px;
+}
+
+.pull-me {
+float:left;
+	display:block;
+    position:relative;
+    right:-25px;
+    width:150px;
+    height:20px;
+	font-family:arial,sans-serif;
+    font-size:14px;
+	color:#00ffff;
+    background:#cc0000;
+	text-decoration:none;
+    -moz-border-bottom-left-radius:5px;
+    -moz-border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+
+.pull-me p {
+    text-align:center;
+}
+
+.panel p{
+    text-align:center;
+}
+
+
+
+
+</style>
+<div>
+		<div class='divtest'>
+		点一下<br>
+        this<br>
+        block<br>
+        fadeout
+        </div> 
+		
+		<div class='divtest1'>
+		点一下<br>
+        this<br>
+        block<br>
+        fadeto 0.5
+        </div>
+	<div class="panel">
+        <br />
+        <br />
+        <p>Now you see me!</p>
+     </div>
+        <p class="slide"><a href="#" class="pull-me">Slide Up/Down</a></p>		
+</div>
