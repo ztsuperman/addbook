@@ -29,6 +29,7 @@
       <th>City（城市）</th>
       <th>State（州）</th>
       <th>Zip（邮编）</th>
+	  <th>创建者的UserID</th>
 	  <th></th>
 	  <th></th>
 	  <th></th>
@@ -46,7 +47,7 @@
         <td class="active" onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.city %></td>
         <td class="success" onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.state %></td>
         <td class="warning" onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.zip %></td>
-		
+		<td class="warning" onclick="location.href='<%=address_book_path(address_book)%>'"><%= address_book.auth %></td>
         <td><%= link_to 'Show', address_book %></td>
         <td><%= link_to 'Edit', edit_address_book_path(address_book) %></td>
         <td><%= link_to 'Delete', address_book, method: :delete, data: { confirm: 'Are you sure?' } %></td>

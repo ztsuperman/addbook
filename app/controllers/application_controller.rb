@@ -11,4 +11,11 @@ class ApplicationController < ActionController::Base
 	def require_user 
 	redirect_to '/login' unless current_user 
 	end
+	def require_admin 
+	redirect_to '/' unless current_user.admin? 
+	end
+	
+	def require_userid 
+	redirect_to '/' unless (current_user.id.to_s == @address_book.auth ||current_user.admin?)
+	end
 end
