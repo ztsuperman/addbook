@@ -18,9 +18,9 @@
 	
 	<% if current_user %> 
   <ul> 
-    <li><%= current_user.email %></li> 
-    <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
-	<li><%= link_to "Jquery Tests...", jquery_path %></li> 
+    <li ><h2><%= "欢迎用户"+current_user.email+"登录本站！！" %></h2></li> 
+    <li><h2><%= link_to "Log out", logout_path, method: "delete" %></h2></li> 
+	<li><h2><%= link_to "Jquery Tests...", jquery_path %></h2></li> 
   </ul> 
 <% else %> 
   <ul> 
